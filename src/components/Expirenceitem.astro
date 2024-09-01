@@ -1,0 +1,44 @@
+---
+interface Props {
+  Title: String;
+  description: string;
+  link?: string;
+  date: string;
+}
+
+const { Title, description, link, date } = Astro.props;
+---
+<div
+  class="absolute w-3 h-3 bg-[#00B4D8] rounded-full mt-1.5 left-[-21px] border border-white dark:border-gray-900 dark:bg-gray-700"
+></div>
+</div>
+<time
+  class="mb-1 text-sm font-normal leading-none text-[#A1A6B4] dark:text-[#A1A6B4]"
+  >{date}</time
+>
+<h3 class="text-lg font-semibold text-[#E5E9F0] dark:text-[#E5E9F0] mt-4">{Title}</h3>
+<p class="mb-4 text-base font-normal text-[#C5C9D6] text-pretty">
+  {description}
+</p>
+{
+    link && (
+    <a
+  href={link}
+  class="inline-flex items-center px-4 py-2 text-sm font-medium text-[#FFFFFF] bg-[#00B4D8] border border-[#00B4D8] rounded-lg hover:bg-[#0077B6] hover:text-[#FFFFFF] focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-100 focus:text-[#FFFFFF] dark:bg-[#00B4D8] dark:text-[#FFFFFF] dark:border-[#00B4D8] dark:hover:text-[#FFFFFF] dark:hover:bg-[#0077B6] dark:focus:ring-[#0077B6]"
+  >Saber más.. {""}<svg
+    class="w-3 h-3 ms-2 rtl:rotate-180"
+    aria-hidden="true"
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 14 10"
+  >
+    <path
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      d="M1 5h12m0 0L9 1m4 4L9 9"></path>
+  </svg>
+  </a>
+    )
+}

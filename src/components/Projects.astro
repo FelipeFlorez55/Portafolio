@@ -1,0 +1,174 @@
+---
+import Angularicon from "../icons/angularicon.astro";
+import Astroicon from "../icons/astroicon.astro";
+import Awsicon from "../icons/awsicon.astro";
+import Cssicon from "../icons/cssicon.astro";
+import Emqxicon from "../icons/emqxicon.astro";
+import Htmlicon from "../icons/htmlicon.astro";
+import Javascripticon from "../icons/javascrypticon.astro";
+import Laravelicon from "../icons/Laravelicon.astro";
+import Nodejsicon from "../icons/nodejsicon.astro";
+import Phpicon from "../icons/phpicon.astro";
+import Tailwindicon from "../icons/tailwindicon.astro";
+import postgreicon from "../icons/postgreicon.astro";
+import Typescrypticon from "../icons/typescrypticon.astro";
+const TAGS = {
+  JAVASCRIPT: {
+    name: "JavaScript",
+    class: "bg-yellow-500/40 text-black", // JavaScript en amarillo con texto negro
+    icon: Javascripticon,
+  },
+  HTML: {
+    name: "HTML",
+    class: "bg-red-600/40 text-white", // HTML en rojo con texto blanco
+    icon: Htmlicon,
+  },
+  CSS: {
+    name: "CSS",
+    class: "bg-blue-600/40 text-white", // CSS en azul con texto blanco
+    icon: Cssicon,
+  },
+  TAILWIND: {
+    name: "Tailwind",
+    class: "bg-blue-600/40 text-white", // Tailwind en azul con texto blanco
+    icon: Tailwindicon,
+  },
+  PHP: {
+    name: "PHP",
+    class: "bg-indigo-700/40 text-white", // PHP en índigo con texto blanco
+    icon: Phpicon,
+  },
+  NODE_JS: {
+    name: "Node.js",
+    class: "bg-green-500/40 text-white", // Node.js en verde con texto blanco
+    icon: Nodejsicon,
+  },
+  EMQX: {
+    name: "EMQX",
+    class: "bg-teal-500/40 text-white", // EMQX en teal con texto blanco
+    icon: Emqxicon,
+  },
+  AWS: {
+    name: "AWS",
+    class: "bg-orange-500/40 text-white", // AWS en naranja con texto blanco
+    icon: Awsicon,
+  },
+  ANGULAR: {
+    name: "Angular",
+    class: "bg-red-700/40 text-white", // Angular en rojo oscuro con texto blanco
+    icon: Angularicon,
+  },
+  LARAVEL: {
+    name: "Laravel",
+    class: "bg-red-500/40 text-white", // Laravel en rojo con texto blanco
+    icon: Laravelicon,
+  },
+  ASTRO: {
+    name: "Astro",
+    class: "bg-purple-600/40 text-white", // Astro en morado con texto blanco
+    icon: Astroicon,
+  },
+  POSTGRESS: {
+    name: "PostgresSQL",
+    class: "bg-purple-600/40 text-white", // Astro en morado con texto blanco
+    icon: postgreicon,
+  },
+  TYPESCRYPT: {
+    name: "Typescript",
+    class: "bg-blue-600/40 text-white", // Astro en morado con texto blanco
+    icon: Typescrypticon,
+  },
+};
+
+const PROJECTS = [
+  {
+    title:
+      "Floes Connecting: Sistema IoT para Gestión de Pedidos en Restaurantes",
+    description: `<p class='mb-4'>Floes Connecting es una innovadora solución para la gestión eficiente de pedidos en restaurantes, 
+    que integra tecnología IoT con infraestructura en la nube de AWS.</p>
+    
+    <p class='mb-4'>He desarrollado un dispositivo IoT propio que se conecta a través de un broker MQTT, 
+    permitiendo a los clientes transmitir sus pedidos directamente desde la mesa.</p>
+    
+    <p >Estos estados se visualizan en tiempo real y se integran con una aplicación web diseñada en PHP, con frontend en HTML, 
+    CSS y JavaScript. El sistema no solo mejora la eficiencia operativa al reducir los tiempos de espera, 
+    sino que también ofrece una experiencia fluida y moderna tanto para los clientes como para el personal del restaurante.</p>`,
+    link: "#",
+    github: "#",
+    image: "/public/projects/floes.webp",
+    tags: [
+      TAGS.PHP,
+      TAGS.NODE_JS,
+      TAGS.AWS,
+      TAGS.POSTGRESS,
+      TAGS.EMQX,
+      TAGS.JAVASCRIPT,
+      TAGS.HTML,
+      TAGS.CSS,
+    ],
+  },
+  {
+    title: "Sistema de Análisis Financiero con IA para Contadores y Dueños de Negocios",
+    description: `<p class='mb-4'>Este proyecto consiste en una plataforma web innovadora que permite a contadores y dueños de negocios subir su contabilidad, 
+    proporcionando una solución completa para calcular KPIs, realizar proyecciones financieras, y obtener explicaciones detalladas de cada métrica a través de inteligencia artificial.</p>
+    
+    <p class='mb-4'>La IA no solo explica los resultados presentes, sino que también ofrece recomendaciones personalizadas para mejorar el desempeño financiero a corto y largo plazo.</p>
+    
+    <p class='mb-4'>La plataforma está diseñada para ser intuitiva y fácil de usar, permitiendo a los usuarios gestionar sus finanzas de manera eficiente y tomar decisiones informadas 
+    sobre el futuro de sus negocios.</p>
+    
+    <p>El sistema fue desarrollado utilizando tecnologías modernas en el frontend como Angular y TypeScript, 
+    con un backend robusto implementado en PHP, todo ello apoyado por una infraestructura en la nube de AWS y utilizando PostgreSQL como base de datos.</p>`,
+    link: "#",
+    github: "#",
+    tags: [
+      TAGS.PHP,
+      TAGS.ANGULAR,
+      TAGS.AWS,
+      TAGS.POSTGRESS,
+      TAGS.TYPESCRYPT,
+    ],
+  },
+];
+
+
+---
+<div class="flex flex-wrap gap-6 justify-center">
+    {PROJECTS.map((project) => (
+      <article class="w-full max-w-3xl lg:max-w-4xl rounded-lg overflow-hidden shadow-lg bg-white dark:bg-gray-800 transition-transform transform hover:-translate-y-1 hover:scale-105 duration-300 mx-auto my-4">
+        
+        {project.image && (
+          <img
+            class="w-full object-cover"
+            src={project.image}
+            alt={`Captura de pantalla del proyecto ${project.title}`}
+          />
+        )}
+  
+        <div class="px-6 py-4">
+          <h3 class="font-bold text-lg mb-2 text-gray-900 dark:text-white">
+            {project.title}
+          </h3>
+          <div class="text-gray-600 dark:text-gray-400 text-sm" set:html={project.description}></div>
+        </div>
+  
+        <div class="px-6 pt-2 pb-4">
+          <ul class="flex flex-wrap gap-2">
+            {project.tags.map((tag, index) => (
+              <li >
+                <span
+                  class={`flex items-center gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}
+                >
+                  <tag.icon class="w-5 h-5 inline-block align-middle" />
+                  {tag.name}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </article>
+    ))}
+  </div>
+  
+
+  </style>

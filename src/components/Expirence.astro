@@ -1,0 +1,40 @@
+---
+import Expirenceitem from "./Expirenceitem.astro";
+
+
+const EXPIRENCE =[
+    {
+        date: '2023-Actualmente..',
+        Title: 'technical support engineer',
+        description: "Responsable de la implementación y soporte técnico de las soluciones Ivanti, especializándome en las herramientas ITSM y Neurons. Gestiono la configuración, personalización y optimización de estas plataformas para mejorar la eficiencia operativa y el cumplimiento de los procesos ITIL en organizaciones de diversos sectores. Mi labor incluye la integración de módulos, resolución de incidentes, capacitación de usuarios, y soporte continuo para garantizar un rendimiento óptimo de las soluciones Ivanti implementadas."
+,
+        
+    },
+    {
+    date: '2021-2022',
+    Title: 'Consultor Técnico',
+    description: "Como consultor técnico, fui responsable de analizar que los desarrollos realizados en Flutter estuvieran alineados con los requerimientos específicos de mi empleador. Supervisé que la arquitectura implementada fuera la óptima y deseada, garantizando que se cumpliera con los estándares de calidad y las mejores prácticas de la industria. Mi rol implicaba una revisión exhaustiva del código y la infraestructura, asegurando que cada componente técnico se ajustara a las expectativas del proyecto y contribuyera a un rendimiento eficiente y estable."
+}
+
+
+];
+---
+
+
+
+<ol class="relative ml-3 line-animate">
+    {
+      EXPIRENCE.map(expirience => (
+        <li class="mb-10 ms-4 relative">
+          
+          <Expirenceitem {...expirience} />
+        </li>
+      ))
+    }
+  </ol>
+
+
+  
+
+ 
+ 

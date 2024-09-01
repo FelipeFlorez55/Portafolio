@@ -1,0 +1,58 @@
+---
+
+---
+<div class="flex flex-wrap justify-center gap-8">
+    <div class="certification-card">
+      <img src="../../public/itilDPI.webp" alt="ITIL® 4 Strategist">
+      <h3>ITIL® 4 Strategist</h3>
+      <p>Direct, Plan and Improve Certificate</p>
+     
+    </div>
+  
+    <div class="certification-card">
+      <img src="../../public/ivanti-certification.webp" alt="Ivanti Neurons Consultant">
+      <h3>Ivanti Neurons Consultant</h3>
+      <p>Service Management</p>
+    </div>
+  </div>
+  <style>
+   .certification-card {
+  background-color: #0d112a;
+  border: 1px solid #00adb5;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px;
+  text-align: center;
+  width: 250px; /* Ancho fijo */
+  height: 300px; /* Alto fijo */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centrar verticalmente */
+  align-items: center; /* Centrar horizontalmente */
+  overflow: visible; /* Permitir que la imagen sobresalga */
+  position: relative; /* Asegurar que la imagen esté posicionada relativamente al contenedor */
+}
+
+.certification-card img {
+  max-width: 100px; /* Máximo ancho por defecto */
+  max-height: 100px; /* Máxima altura por defecto */
+  width: auto;
+  height: auto;
+  margin-bottom: 16px;
+  display: block;
+  transition: transform 0.3s ease; /* Transición suave solo para la imagen */
+  z-index: 10; /* Asegurar que la imagen esté por encima de otros elementos */
+}
+
+.certification-card img:hover {
+  transform: scale(2.5); /* Aumenta el tamaño de la imagen al pasar el mouse */
+  z-index: 1000; /* Asegura que la imagen esté por encima de todos los elementos cuando se agranda */
+  position: absolute; /* Permitir que la imagen se posicione fuera del contenedor */
+}
+
+
+
+
+
+
+  </style>
