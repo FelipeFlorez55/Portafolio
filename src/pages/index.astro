@@ -11,6 +11,7 @@ import Briefcase from '../icons/briefcase.astro';
 import Codigoicon from '../icons/codigoicon.astro';
 import Projects from '../components/Projects.astro';
 import Certificaciones from '../components/certificaciones.astro';
+import Certicon from '../icons/certicon.astro';
 ---
 
 <Layout title=" Portafolio Felipe Florez - Desarrollador y Programador FullStack " 
@@ -76,6 +77,10 @@ import Certificaciones from '../components/certificaciones.astro';
 		<Projects />
 	</SectionContainer>
 	<SectionContainer  id="Certificaciones">
+		<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+			<Certicon/>
+			Certificaciones
+		</h2>
 		<Certificaciones />
 	</SectionContainer>
 	</main>
